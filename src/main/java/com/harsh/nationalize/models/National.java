@@ -14,5 +14,5 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class National {
     private String name;
-    private List<Country> countries;
+    private List<Country> country;
 }
