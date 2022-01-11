@@ -31,7 +31,7 @@ public class NationalizeController {
         //     return new Country(countryService.getCountryName(country.getCountryId()), country.getProbability());
         // }).collect(Collectors.toList()));
         model.addAttribute("name", name);
-        model.addAttribute("countries", national.getCountries());
+        model.addAttribute("countries", national.getCountry());
         return "welcome";
     }
 }
