@@ -34,6 +34,7 @@ uri="http://java.sun.com/jsp/jstl/core"%>
         Based on the name following can be your Nationality
       </h3>
       <br />
+      <h1 style="color: red;">${errormsg}</h1>
       <table class="table table-striped">
         <c:forEach items="${countries}" var="country">
           <tr>

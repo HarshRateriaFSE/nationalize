@@ -33,6 +33,9 @@ public class NationalizeController {
     @PostMapping("/")
     public String putNations(ModelMap model, @RequestParam String name) {
         National national = restTemplate.getForObject("https://api.nationalize.io?name=" + name, National.class);
+        if(national.getCountry()==null){
+            model.addAttribute("errormsg", new String("Error 404: No country found"));
+        }
         national.setCountry(national.getCountry().stream().map(country -> {
             return new Country(countryService.getCountryName(country.getCountry_id()), Double.parseDouble(new DecimalFormat("##.##").format(country.getProbability())) );
         }).collect(Collectors.toList()));
