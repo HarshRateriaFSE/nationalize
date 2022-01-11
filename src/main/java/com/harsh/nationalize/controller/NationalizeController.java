@@ -33,7 +33,7 @@ public class NationalizeController {
     @PostMapping("/")
     public String putNations(ModelMap model, @RequestParam String name) {
         National national = restTemplate.getForObject("https://api.nationalize.io?name=" + name, National.class);
-        if(national.getCountry()==null){
+        if(national.getCountry().isEmpty()){
             model.addAttribute("errormsg", new String("Error 404: No country found"));
         }
         national.setCountry(national.getCountry().stream().map(country -> {
