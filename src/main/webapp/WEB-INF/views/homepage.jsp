@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Gender Guess</title>
+    <title>Nationality Predict</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -24,14 +24,12 @@
   <body class="container">
     <form method="post">
       <div class="mb-3">
-        <h1 style="color: red">Predict Gender using Name!!!</h1>
+        <h1 style="color: red">Predict your Nationality using Name!!!</h1>
         <br />
       </div>
       <div>
         <div class="mb-3">
-          <label for="formGroupExampleInput" class="form-label"
-            >Enter your Name</label
-          >
+          
           <input
             type="text"
             class="form-control"
@@ -45,7 +43,7 @@
         </div>
       </div>
       <div class="mb-3">
-        <small>made by harsh rateria...</small>
+        <small style="color: grey; font-size: 50%;">made by harsh rateria...</small>
       </div>
     </form>
     <br />

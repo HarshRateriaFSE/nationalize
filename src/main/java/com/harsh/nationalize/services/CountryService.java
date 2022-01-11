@@ -9,7 +9,7 @@ public class CountryService {
     
     public String getCountryName(String countryCode){
         String countryName = new String();
-        Locale locale = new Locale("", "countryCode");
+        Locale locale = new Locale("", countryCode);
         countryName = locale.getDisplayCountry();
         return countryName;
     }

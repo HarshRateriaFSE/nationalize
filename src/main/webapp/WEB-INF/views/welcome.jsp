@@ -5,7 +5,7 @@ uri="http://www.springframework.org/tags/form"%> <%@ taglib prefix="c"
 uri="http://java.sun.com/jsp/jstl/core"%>
 <html>
   <head>
-    <title>Your Gender</title>
+    <title>Country Details</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -28,17 +28,17 @@ uri="http://java.sun.com/jsp/jstl/core"%>
 
   <body class="container">
     <div class="mb-3">
-      <h2 style="color: red">Welcome ${name}!!</h2>
+      <h1 style="color: red">Welcome ${name}!!</h1>
+      <br />
+      <h3 style="color: gray">
+        Based on the name following can be your Nationality
+      </h3>
       <br />
       <table class="table table-striped">
-        <tr>
-          <td>Name:</td>
-          <td>${name}</td>
-        </tr>
         <c:forEach items="${countries}" var="country">
           <tr>
             <td>Country Name:</td>
-            <td><c:out value="${country.countryId}" /></td>
+            <td><c:out value="${country.country_id}" /></td>
           </tr>
           <tr>
             <td>Probability:</td>
@@ -50,7 +50,7 @@ uri="http://java.sun.com/jsp/jstl/core"%>
       <a href="/" class="btn btn-primary">Back</a>
       <br />
       <br />
-      <small>made by harsh rateria...</small>
+      <small style="color: grey; font-size: 50%;">made by harsh rateria...</small>
     </div>
   </body>
 </html>
